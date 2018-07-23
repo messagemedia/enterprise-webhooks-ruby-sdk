@@ -56,7 +56,7 @@ Open up the public_key.pem file and replace the placeholder that says ```ENTER_P
 ### Changing the request line
 The request line will need to be changed according to your callback url and request type. For instance, if your callback url is `/captureData` and the method type was `PATCH` then the resulting request line would look like this:
 ```ruby
-  verifier.update("PATCH /captureData HTTP/1.1" + date + body);
+  request_line = 'PATCH /captureData HTTP/1.1'
 ```
 
 ### Testing
