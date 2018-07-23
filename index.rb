@@ -16,8 +16,8 @@ post '/' do
 	# Read public key from file
 	public_key = OpenSSL::PKey::RSA.new File.read 'public_key.pem'
 	if public_key.verify(digest, signature, message)
-	    p "VALID"
+	    p "Verification Successful"
 	else
-	    p "NOT VALID"
+	    p "Verification Failed"
 	end
 end
